@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,20 +8,26 @@ export class AppComponent {
   length: number = 0;
   event1!: string;
   password: string = '';
+  // disable: boolean = true;
   includeLetters: boolean = false;
   includeNumbers: boolean = false;
-  includeSymbol: boolean = false;
+  includeSymbols: boolean = false;
 
   onChangeUseLetters(){
     this.includeLetters = !this.includeLetters;
+    // this.disable = !this.disable;
   }
 
-  onChangeUseNumber(){
+  onChangeUseNumbers(){
     this.includeNumbers = !this.includeNumbers;
+    // this.disable = !this.disable;
+
   }
 
-  onChangeUseSymbol(){
-    this.includeSymbol = !this.includeSymbol;
+  onChangeUseSymbols(){
+    this.includeSymbols = !this.includeSymbols;
+    // this.disable = !this.disable;
+
   }
 
   onChangeLength(event: Event){
@@ -50,7 +55,7 @@ onButtonClick(){
     validChars += numbers;
   }
 
-  if(this.includeSymbol){
+  if(this.includeSymbols){
     validChars += symbol;
   }
 
